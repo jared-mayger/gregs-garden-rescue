@@ -1,0 +1,764 @@
+/* ===================================
+   CSS Variables & Reset
+   =================================== */
+:root {
+    /* Color Palette - Natural Garden Greens */
+    --primary-green: #2d5016;
+    --secondary-green: #4a7c2c;
+    --accent-green: #6ba03a;
+    --light-green: #a8d88e;
+    --cream: #faf8f3;
+    --earth-brown: #8b6f47;
+    --dark-text: #1a2e0f;
+    --medium-text: #3d5a29;
+    --light-text: #5c7a45;
+    
+    /* Typography */
+    --font-display: Georgia, 'Times New Roman', serif;
+    --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 3rem;
+    --spacing-xl: 5rem;
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 8px rgba(45, 80, 22, 0.08);
+    --shadow-md: 0 4px 16px rgba(45, 80, 22, 0.12);
+    --shadow-lg: 0 8px 32px rgba(45, 80, 22, 0.16);
+    
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-medium: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--dark-text);
+    background-color: var(--cream);
+    line-height: 1.7;
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+/* ===================================
+   Typography
+   =================================== */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--primary-green);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+/* ===================================
+   Container & Layout
+   =================================== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+/* ===================================
+   Navigation
+   =================================== */
+.navbar {
+    background-color: rgba(250, 248, 243, 0.95);
+    backdrop-filter: blur(10px);
+    padding: var(--spacing-sm) 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow-sm);
+    animation: slideDown 0.5s ease;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-green);
+}
+
+.leaf-icon {
+    font-size: 1.8rem;
+    animation: gentle-float 3s ease-in-out infinite;
+}
+
+@keyframes gentle-float {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-5px) rotate(5deg);
+    }
+}
+
+.brand-text {
+    letter-spacing: -0.5px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: var(--spacing-md);
+}
+
+.nav-links a {
+    color: var(--medium-text);
+    font-weight: 500;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: 6px;
+    transition: all var(--transition-fast);
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-green);
+    transition: width var(--transition-medium);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--primary-green);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 80%;
+}
+
+/* ===================================
+   Hero Section
+   =================================== */
+.hero {
+    position: relative;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: var(--spacing-xl);
+}
+
+.hero-background {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, 
+        var(--primary-green) 0%, 
+        var(--secondary-green) 50%, 
+        var(--accent-green) 100%);
+    opacity: 0.95;
+}
+
+.hero-background::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: 
+        radial-gradient(circle at 20% 50%, rgba(168, 216, 142, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(107, 160, 58, 0.15) 0%, transparent 50%);
+    animation: pulse 8s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    animation: fadeInUp 0.8s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.title-line {
+    display: block;
+    animation: slideInLeft 0.8s ease;
+}
+
+.title-line:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.title-accent {
+    color: var(--light-green);
+    font-style: italic;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: 0 auto var(--spacing-lg);
+    opacity: 0.95;
+    font-weight: 300;
+    animation: fadeIn 1s ease 0.4s both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.95;
+    }
+}
+
+/* ===================================
+   Buttons
+   =================================== */
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background-color: white;
+    color: var(--primary-green);
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-medium);
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-body);
+    animation: fadeIn 1s ease 0.6s both;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+    background-color: var(--light-green);
+    color: white;
+}
+
+.cta-button.secondary {
+    background-color: var(--accent-green);
+    color: white;
+}
+
+.cta-button.secondary:hover {
+    background-color: var(--secondary-green);
+}
+
+/* ===================================
+   Page Header (for inner pages)
+   =================================== */
+.page-header {
+    background: linear-gradient(135deg, var(--secondary-green), var(--accent-green));
+    padding: var(--spacing-xl) 0 var(--spacing-lg);
+    text-align: center;
+    color: white;
+    margin-bottom: var(--spacing-xl);
+    animation: fadeInUp 0.6s ease;
+}
+
+.page-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: var(--spacing-sm);
+    color: white;
+}
+
+.page-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.95;
+    max-width: 700px;
+    margin: 0 auto;
+    font-weight: 300;
+}
+
+/* ===================================
+   Services Section
+   =================================== */
+.services-section {
+    padding: var(--spacing-lg) 0 var(--spacing-xl);
+}
+
+.section-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+    position: relative;
+    animation: fadeInUp 0.6s ease;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-green), var(--light-green));
+    margin: var(--spacing-sm) auto 0;
+    border-radius: 2px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.service-card {
+    background: white;
+    padding: var(--spacing-md);
+    border-radius: 16px;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-medium);
+    animation: fadeInUp 0.6s ease both;
+    border: 2px solid transparent;
+}
+
+.service-card:nth-child(1) { animation-delay: 0.1s; }
+.service-card:nth-child(2) { animation-delay: 0.2s; }
+.service-card:nth-child(3) { animation-delay: 0.3s; }
+.service-card:nth-child(4) { animation-delay: 0.4s; }
+.service-card:nth-child(5) { animation-delay: 0.5s; }
+.service-card:nth-child(6) { animation-delay: 0.6s; }
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--light-green);
+}
+
+.service-icon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-sm);
+    display: block;
+}
+
+.service-title {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--secondary-green);
+}
+
+.service-description {
+    color: var(--medium-text);
+    line-height: 1.7;
+}
+
+/* ===================================
+   CTA Section
+   =================================== */
+.cta-section {
+    text-align: center;
+    padding: var(--spacing-lg) 0;
+    animation: fadeInUp 0.6s ease 0.7s both;
+}
+
+.cta-text {
+    font-size: 1.5rem;
+    font-family: var(--font-display);
+    color: var(--primary-green);
+    margin-bottom: var(--spacing-md);
+}
+
+/* ===================================
+   Testimonials Section
+   =================================== */
+.testimonials-section {
+    padding: var(--spacing-lg) 0 var(--spacing-xl);
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.testimonial-card {
+    background: white;
+    padding: var(--spacing-md);
+    border-radius: 16px;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-medium);
+    animation: fadeInUp 0.6s ease both;
+    border-left: 4px solid var(--accent-green);
+}
+
+.testimonial-card:nth-child(1) { animation-delay: 0.1s; }
+.testimonial-card:nth-child(2) { animation-delay: 0.2s; }
+.testimonial-card:nth-child(3) { animation-delay: 0.3s; }
+.testimonial-card:nth-child(4) { animation-delay: 0.4s; }
+.testimonial-card:nth-child(5) { animation-delay: 0.5s; }
+.testimonial-card:nth-child(6) { animation-delay: 0.6s; }
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.testimonial-stars {
+    color: var(--earth-brown);
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.testimonial-text {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--medium-text);
+    margin-bottom: var(--spacing-md);
+    font-style: italic;
+}
+
+.testimonial-author {
+    border-top: 1px solid var(--light-green);
+    padding-top: var(--spacing-sm);
+}
+
+.author-name {
+    font-weight: 700;
+    color: var(--primary-green);
+    margin-bottom: 0.25rem;
+}
+
+.author-location {
+    font-size: 0.9rem;
+    color: var(--light-text);
+}
+
+/* ===================================
+   Booking Form Section
+   =================================== */
+.booking-section {
+    padding: var(--spacing-lg) 0 var(--spacing-xl);
+}
+
+.form-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: var(--spacing-lg);
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.booking-form {
+    background: white;
+    padding: var(--spacing-lg);
+    border-radius: 16px;
+    box-shadow: var(--shadow-md);
+    animation: fadeInUp 0.6s ease;
+}
+
+.form-group {
+    margin-bottom: var(--spacing-md);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-md);
+}
+
+label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    font-weight: 600;
+    color: var(--primary-green);
+    font-size: 0.95rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.875rem;
+    border: 2px solid #e0e5db;
+    border-radius: 8px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    transition: all var(--transition-fast);
+    background-color: var(--cream);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--accent-green);
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(107, 160, 58, 0.1);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-xs);
+    cursor: pointer;
+    font-weight: 400;
+    color: var(--medium-text);
+}
+
+input[type="checkbox"] {
+    margin-top: 0.25rem;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: var(--accent-green);
+}
+
+.form-note {
+    font-size: 0.9rem;
+    color: var(--light-text);
+    margin-top: var(--spacing-sm);
+    text-align: center;
+}
+
+.booking-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    animation: fadeInUp 0.6s ease 0.2s both;
+}
+
+.info-card {
+    background: white;
+    padding: var(--spacing-md);
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    border-left: 4px solid var(--accent-green);
+}
+
+.info-title {
+    font-size: 1.3rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--secondary-green);
+}
+
+.info-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.info-list li {
+    padding: var(--spacing-xs) 0;
+    color: var(--medium-text);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.info-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--accent-green);
+    font-weight: bold;
+}
+
+/* ===================================
+   Footer
+   =================================== */
+.footer {
+    background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+    color: white;
+    padding: var(--spacing-xl) 0 var(--spacing-md);
+    margin-top: var(--spacing-xl);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-lg);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.footer-title {
+    font-size: 1.3rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--light-green);
+}
+
+.contact-item {
+    margin-bottom: var(--spacing-xs);
+    opacity: 0.95;
+}
+
+.contact-item a {
+    color: color var(--accent-green);
+    transition: color var(--secondary-green);
+}
+
+.contact-item a:hover {
+    color: var(--light-green);
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
+/* ===================================
+   Responsive Design
+   =================================== */
+@media (max-width: 768px) {
+    .nav-links {
+        gap: var(--spacing-sm);
+    }
+    
+    .nav-links a {
+        padding: var(--spacing-xs);
+        font-size: 0.9rem;
+    }
+    
+    .hero {
+        min-height: 500px;
+    }
+    
+    .services-grid,
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .booking-info {
+        order: 2;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --spacing-md: 1.5rem;
+        --spacing-lg: 2rem;
+        --spacing-xl: 3rem;
+    }
+    
+    .nav-brand {
+        font-size: 1.2rem;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .cta-button {
+        padding: 0.875rem 2rem;
+        font-size: 1rem;
+    }
+}

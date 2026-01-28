@@ -1,0 +1,9 @@
+# robots.txt for Greg's Garden Rescue
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.gregsgardenrescue.com/sitemap.xml
+
+# Crawl delay (optional - helps prevent server overload)
+Crawl-delay: 10

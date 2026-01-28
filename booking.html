@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Service - Greg's Garden Rescue</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="booking-page">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="leaf-icon">🌿</span>
+                <span class="brand-text">Greg's Garden Rescue</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Services</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="booking.html" class="active">Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1 class="page-title">Book Your Service</h1>
+            <p class="page-subtitle">Fill out the form below and we'll get back to you within 24 hours</p>
+        </div>
+    </header>
+
+    <!-- Booking Form Section -->
+    <section class="booking-section">
+        <div class="container">
+            <div class="form-container">
+                <form action="https://formsubmit.co/jaredmayger@gmail.com" method="POST" class="booking-form">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <!-- Hidden fields for FormSubmit configuration -->
+                    <input type="hidden" name="_subject" value="New Booking Request - Greg's Garden Rescue">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Property Address *</label>
+                        <input type="text" id="address" name="address" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service">Service Required *</label>
+                        <select id="service" name="service" required>
+                            <option value="">Select a service</option>
+                            <option value="garden-restoration">Garden Restoration</option>
+                            <option value="pruning-trimming">Pruning & Trimming</option>
+                            <option value="lawn-care">Lawn Care</option>
+                            <option value="pressure-washing">Pressure Washing</option>
+                            <option value="decking">Decking Revival</option>
+                            <option value="seasonal-maintenance">Seasonal Maintenance</option>
+                            <option value="other">Other / Multiple Services</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="date">Preferred Date *</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="time">Preferred Time</label>
+                            <select id="time" name="time">
+                                <option value="">Select time slot</option>
+                                <option value="morning">Morning (8am - 12pm)</option>
+                                <option value="afternoon">Afternoon (12pm - 4pm)</option>
+                                <option value="flexible">Flexible</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Additional Details</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell us about your garden, specific concerns, or any special requests..."></textarea>
+                    </div>
+
+                    <button type="submit" class="cta-button">Submit Booking Request</button>
+                    
+                    <p class="form-note">* Required fields. We'll contact you within 24 hours to confirm your booking.</p>
+                </form>
+
+                <div class="booking-info">
+                    <div class="info-card">
+                        <h3 class="info-title">What to Expect</h3>
+                        <ul class="info-list">
+                            <li>Free consultation and quote</li>
+                            <li>Flexible scheduling options</li>
+                            <li>Professional, insured service</li>
+                            <li>Satisfaction guaranteed</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <h3 class="info-title">Service Areas</h3>
+                        <p class="testimonial-text">We proudly serve the Wollongong area and surrounding communities. <br/>Not sure if we cover your area? Just ask!</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3 class="info-title">Quick Contact</h3>
+                        <p class="contact-item">📧 <a href="/cdn-cgi/l/email-protection#87eee9e1e8c7e0f5e2e0f4e0e6f5e3e2e9f5e2f4e4f2e2a9e4e8ea"><span class="__cf_email__" data-cfemail="eb82858d84ab8c998e8c988c8a998f8e85998e98889e8ec5888486">[email&#160;protected]</span></a></p>
+                        <p class="contact-item">📞 <a href="tel:+61410856466">0410 856 466</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="leaf-icon">🌿</span>
+                    <span class="brand-text">Greg's Garden Rescue</span>
+                </div>
+                <div class="footer-contact">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <p class="contact-item">📧 Email: <a href="/cdn-cgi/l/email-protection#7d14131b123d1a0f181a0e1a1c0f1918130f180e1e0818531e1210"><span class="__cf_email__" data-cfemail="3a53545c557a5d485f5d495d5b485e5f54485f49594f5f14595557">[email&#160;protected]</span></a></p>
+                    <p class="contact-item">📞 Phone: <a>0410 856 466</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Greg's Garden Rescue. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
