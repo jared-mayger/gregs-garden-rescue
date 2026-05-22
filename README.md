@@ -29,15 +29,6 @@ Professional garden restoration and maintenance services website.
 └── README.md              # This file
 ```
 
-## 🚀 Quick Start
-
-1. Clone this repository
-2. Open `index.html` in your browser or use Live Server in VS Code
-3. Customize content, contact info, and domain names
-4. Deploy to GitHub Pages, Netlify, or your hosting provider
-
-## ⚙️ Setup Instructions
-
 ### Update Before Going Live:
 
 1. **Booking Form Email:**
@@ -57,20 +48,14 @@ Professional garden restoration and maintenance services website.
    - Update `sitemap.xml` with your domain
    - Copy structured data from `structured-data.html` into HTML head sections
 
-## 🌐 Deployment Options
-
-### GitHub Pages (Free):
+### GitHub Pages Deployment:
 1. Push code to GitHub
 2. Settings → Pages → Enable GitHub Pages
 3. Select branch (main) and root folder
 4. Access at: `https://YOUR-USERNAME.github.io/REPO-NAME/`
 5. Add custom domain in settings (optional)
 
-### Netlify (Easiest):
-1. Go to netlify.com
-2. Drag & drop project folder
-3. Connect custom domain
-4. Auto-deploy on git push
+
 
 ## 🛠️ Technologies Used
 
@@ -101,4 +86,3 @@ This is a private business website. No contributions needed.
 
 ---
 
-**Built with 🌱 for Greg's Garden Rescue**

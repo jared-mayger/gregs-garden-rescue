@@ -1,0 +1,6 @@
+Ideas / Things to implement
+- Add Logo, and official business contact details (Business Email)
+- Setup and Link Google Business Profile (GBP) for Csutomer Reviews
+- Before and after pictures / animations either in testimonials or a new 'Jobs' Section when seledcting a Service from the main page
+- Embed 'Highlight Reel' in main header of home page
+- See ReadMe for othe GoLive activities
