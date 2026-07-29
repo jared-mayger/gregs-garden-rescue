@@ -25,28 +25,9 @@ Professional garden restoration and maintenance services website.
 ├── robots.txt             # SEO - Search engine instructions
 ├── sitemap.xml            # SEO - Site structure for search engines
 ├── structured-data.html   # SEO - Schema markup (copy into HTML files)
-├── SEO-SETUP-GUIDE.txt    # Complete SEO setup instructions
 └── README.md              # This file
 ```
 
-### Update Before Going Live:
-
-1. **Booking Form Email:**
-   - Open `booking.html`
-   - Line ~37: Change `your-email@example.com` to your real email
-
-2. **Contact Information (all pages):**
-   - Email: info@gregsgardenrescue.com → your email
-   - Phone: (555) 123-4567 → your phone
-   - Location: Your City, State → your location
-
-3. **Domain Names (all files):**
-   - Replace `https://www.gregsgardenrescue.com` with your actual domain
-
-4. **SEO Setup:**
-   - Read `SEO-SETUP-GUIDE.txt` for complete instructions
-   - Update `sitemap.xml` with your domain
-   - Copy structured data from `structured-data.html` into HTML head sections
 
 ### GitHub Pages Deployment:
 1. Push code to GitHub

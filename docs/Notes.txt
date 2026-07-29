@@ -1,6 +1,33 @@
 Ideas / Things to implement
 - Add Logo, and official business contact details (Business Email)
 - Setup and Link Google Business Profile (GBP) for Csutomer Reviews
+
 - Before and after pictures / animations either in testimonials or a new 'Jobs' Section when seledcting a Service from the main page
 - Embed 'Highlight Reel' in main header of home page
-- See ReadMe for othe GoLive activities
+- Link Socials; Facebook + Instagram
+
+1. **Booking Form Email:**
+   - Open `booking.html`
+   - Line ~37: Change `your-email@example.com` to your real email
+
+2. **Contact Information (all pages):**
+   - Email: info@gregsgardenrescue.com → your email
+   - Phone: (555) 123-4567 → your phone
+   - Location: Your City, State → your location
+
+3. **Domain Names (all files):**
+   - Replace `https://www.gregsgardenrescue.com` with your actual domain
+
+4. **SEO Setup:**
+   - Read `SEO-SETUP-GUIDE.txt` for complete instructions
+   - Update `sitemap.xml` with your domain
+   - Copy structured data from `structured-data.html` into HTML head sections
+
+
+
+   Things you. need from Greg:
+   - Logo
+   - Testamonials
+   - An email or permission to create one (Same as Google Business Profile)
+
+
