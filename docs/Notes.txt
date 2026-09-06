@@ -10,15 +10,14 @@ Ideas / Things to implement
 Dev:
 - Favicon
 - LLMs.xml
-- Canonical tags
 - og:image
 - Meta Description
 - Check if viewsource is empty
 - 404 Page
-- Get rid of Emoji Icons - Need logo
 - Language Attribution
 - Source Maps should not be in production
 - Check Console for Errors
+- Canonical and Open Graph Tags
 - Privacy Policy Page ?
 - T&C's Page ?
 
