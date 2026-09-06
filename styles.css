@@ -120,11 +120,6 @@ a {
     color: var(--primary-green);
 }
 
-.leaf-icon {
-    font-size: 1.8rem;
-    animation: gentle-float 3s ease-in-out infinite;
-}
-
 @keyframes gentle-float {
     0%, 100% {
         transform: translateY(0px) rotate(0deg);
