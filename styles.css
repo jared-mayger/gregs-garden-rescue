@@ -118,6 +118,12 @@ a {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--primary-green);
+    gap: 10px; 
+}
+
+.brand-logo {
+    height: 36px;
+    width: auto;
 }
 
 @keyframes gentle-float {
