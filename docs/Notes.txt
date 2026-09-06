@@ -1,6 +1,7 @@
 Ideas / Things to implement
 - Add Logo, and official business contact details (Business Email)
 - Setup and Link Google Business Profile (GBP) for Csutomer Reviews
+   - GregsG@RDENS
 
 - Before and after pictures / animations either in testimonials or a new 'Jobs' Section when seledcting a Service from the main page
 - Embed 'Highlight Reel' in main header of home page
@@ -28,6 +29,4 @@ Ideas / Things to implement
    Things you. need from Greg:
    - Logo
    - Testamonials
-   - An email or permission to create one (Same as Google Business Profile)
-
 
