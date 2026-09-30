@@ -8,27 +8,12 @@ Ideas / Things to implement
 - Link Socials; Facebook + Instagram
 
 Dev:
-- Favicon
 - LLMs.xml
 - og:image
-- Meta Description
-- Check if viewsource is empty
-- 404 Page
-- Language Attribution
-- Source Maps should not be in production
-- Check Console for Errors
 - Canonical and Open Graph Tags
-- Privacy Policy Page ?
-- T&C's Page ?
+- Update to Structured Data, Robots.txt, readme and sitemap at the end.
 
-1. **Booking Form Email:**
-   - Open `booking.html`
-   - Line ~37: Change `your-email@example.com` to your real email
 
-2. **Contact Information (all pages):**
-   - Email: info@gregsgardenrescue.com → your email
-   - Phone: (555) 123-4567 → your phone
-   - Location: Your City, State → your location
 
 3. **Domain Names (all files):**
    - Replace `https://www.gregsgardenrescue.com` with your actual domain
